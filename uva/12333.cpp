@@ -50,18 +50,19 @@ int main() {
         freopen("ipt.in", "r", stdin);
         freopen("opt.out", "w", stdout);
 	#endif
-    int t = 1;
+    int t = 1, cs;
     string s;
-    cin >> s;
+    cin >> cs;
 
     string a = "1", b = "1";
-    for(int i = 0; i < 100001; i++) {
+    for(int i = 0; i < 100000; i++) {
         insert(a, i);
         add(a, b);
         swap(a, b);
     }
 
-    while(cin >> s) {
+    while(cs--) {
+        cin >> s;
         trie *cur = root;
         int i = 0;
         while(i < s.size()) {
